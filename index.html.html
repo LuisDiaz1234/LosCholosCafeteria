@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Donas Personalizadas</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #342006;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #A44D08;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 20px;
+        color: #342006;
+    }
+
+    select, input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #A44D08;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background-color: #DEA02C;
+    }
+
+    p#resultado {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #DBB688;
+    }
+</style>
+
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Mini Donas Personalizadas</h1>
+
+    <label for="base">Elige la base:</label>
+    <select id="base">
+        <option value="chocolate">Chocolate</option>
+        <option value="vainilla">Vainilla</option>
+        <option value="canela">Canela</option>
+    </select>
+    <br>
+
+    <label for="cobertura">Elige la cobertura:</label>
+    <select id="cobertura">
+        <option value="chocolate-blanco">Chocolate blanco</option>
+        <option value="chocolate-negro">Chocolate negro</option>
+        <option value="colores">Colores</option>
+    </select>
+    <br>
+
+    <label for="topping">Elige el topping:</label>
+    <select id="topping">
+        <option value="chispas-chocolate">Chispas de chocolate</option>
+        <option value="leche-polvo">Leche en polvo</option>
+        <option value="chispas-colores">Chispas de colores</option>
+        <option value="rocklets">Rocklets</option>
+        <option value="oreo">Oreo</option>
+    </select>
+    <br>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" min="1" value="1">
+    <br>
+
+    <button onclick="calcularPrecio()">Calcular precio</button>
+    <p id="resultado"></p>
+</body>
+</html>
